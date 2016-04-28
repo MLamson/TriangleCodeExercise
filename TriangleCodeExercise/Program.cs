@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace TriangleCodeExercise
 {
     class Program
@@ -14,3 +16,4 @@ namespace TriangleCodeExercise
         }
     }
 }
+

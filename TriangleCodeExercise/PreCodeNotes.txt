@@ -1,0 +1,40 @@
+﻿Write a program that can tell you, given 3 lengths, if a triangle is equilateral, isosceles, or scalene.
+The program should raise an error if the triangle cannot exist.
+
+Hint
+The sum of the lengths of any two sides of a triangle always exceeds the length of the third side, a principle known as the triangle inequality.
+Example function signature in C#:
+public string isTriangle(int side1, int side2, int side3)
+Example input/output:
+
+isTriangle(3, 3, 3) => “Equilateral”
+
+
+Outputs:
+Isosceles = 2 sides are equal
+Equilateral = all sides equal
+scalene = no sides equal
+Not a triangle = any 2 sides must be longer than the remaining side
+
+if side a + side b < side c OR side a + side c < side b OR side side b + side c < side a 
+
+     output  “ is not a triangle"
+ 
+if side a = side b and side b = side c
+ 
+      output “Is Equilateral triangle"
+
+Else if side a = side b OR side a = side c OR side b = side c
+
+     output “is Isosceles triangle"
+
+Else 
+
+     output “is scalene triangle"
+
+
+
+
+
+
+
