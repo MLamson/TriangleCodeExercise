@@ -10,28 +10,19 @@ namespace TriangleCodeExercise
         }   
         internal static string IsTriangle(int triangleSide1, int triangleSide2, int triangleSide3)
         {
-            string result = "";
-
+            if (!(ValidTriangle(triangleSide1, triangleSide2, triangleSide3)))
+            {
+                return "Is not a triangle";
+            }
             if (AllSidesEqual(triangleSide1, triangleSide2, triangleSide3))
             {
-                result = "Is an equilateral triangle";
+                return "Is an equilateral triangle";
             }
-            else if (ValidTriangle(triangleSide1, triangleSide2, triangleSide3))
+            if (TwoSidesEqual(triangleSide1, triangleSide2, triangleSide3))
             {
-                if (TwoSidesEqual(triangleSide1, triangleSide2, triangleSide3))
-                {
-                    result = "Is an isosceles triangle";
-                }
-                else
-                {
-                    result = "Is a scalene triangle";
-                }  
+                return "Is an isosceles triangle";
             }
-            else
-            {
-                result = "Is not a triangle";
-            }
-            return result;
+                return "Is a scalene triangle";       
         }
 
         private static bool TwoSidesEqual(int triangleSide1, int triangleSide2, int triangleSide3)
